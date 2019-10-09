@@ -3,12 +3,13 @@
 const express = require('express');
 //创建路由对象
 const router = express.Router();
+const userController = require('../controller/user');
 
 //监听 用户 登陆的页面请求
-router.get('/login.html',(req,res)=>{
-    //返回一个登陆用的页面
-    res.render('admin/login');
-});
+router.get('/login.html',userController.getLoginPage);
+
+//用户请求登陆
+router.post('/userLogin',userController.userLogin)
 
 //暴露路由对象
 module.exports = router;

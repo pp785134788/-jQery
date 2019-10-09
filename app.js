@@ -6,6 +6,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 //引入 ./router/user 分支路由
 const userRouter = require('./router/user');
+//引入 ./router/index 分支路由
+const indexRouter = require('./router/index');
 //创建服务器框架
 const app = express();
 
@@ -30,3 +32,4 @@ app.set('view engine','ejs');
         app.use('/以书面开头',router对象);
  */
 app.use('/admin/user',userRouter);
+app.use('/admin',indexRouter);
