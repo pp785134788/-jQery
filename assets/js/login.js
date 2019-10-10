@@ -38,7 +38,7 @@ $('#btn').on('click', function () {
 //定义一个变量，记录登陆失败还是成功
 let isLogin = false;
 //点击确定或者是关闭的时候，如果是登陆成功了的，需要跳转到主页
-$('.modal-footer').on('click', function () {
+$('.model-footer').on('click', function () {
     //判断是否成功，如果是成功就跳转
     if (isLogin) {
         location.href = 'http://127.0.0.1:8080/admin/index.html'

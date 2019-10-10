@@ -5,7 +5,7 @@ const express = require('express');
 //引入第三方 bodyParser 模块
 const bodyParser = require('body-parser');
 //引入第三方 session 模块
-const session = require('express-session');
+const session = require('exporess-session');
 //引入 ./router/user 分支路由
 const userRouter = require('./router/user');
 //引入 ./router/index 分支路由
