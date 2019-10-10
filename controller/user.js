@@ -26,6 +26,7 @@ module.exports = {
             if (r) {
                 //还要判断密码
                 if (r.password === password) {
+                    req.session.siLogin = true;
                     //密码正确了  - 登陆成功
                     res.send({
                         code: 200,
